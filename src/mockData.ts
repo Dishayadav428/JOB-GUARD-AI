@@ -1,0 +1,95 @@
+import { JobCheckInput } from './types';
+
+export const SAMPLE_CASES: { name: string; tag: string; input: JobCheckInput }[] = [
+  {
+    name: 'Telegram Task & Deposit Scam',
+    tag: 'Critical Scam',
+    input: {
+      jobTitle: 'Part-Time Rating & Review Executive',
+      companyName: 'Global Media Marketing Ltd',
+      recruiterEmail: 'hr.stephanie2026@gmail.com',
+      officialWebsite: 'https://globalmedia-taskreview.xyz',
+      communicationChannel: 'telegram',
+      interviewConducted: 'none',
+      moneyRequested: true,
+      moneyPurpose: 'Registration and security deposit of ₹1,500 (100% refundable after 1st task)',
+      offeredSalary: '₹3,000 to ₹5,000 daily payout',
+      jobDescription: 'Simple part-time work from home! Like youtube videos, rate 5 star reviews on Google maps, daily payout. Earn 5000 daily with no skills required. Immediate joining bonus on payment. Only 5 slots left today, hurry up!',
+    },
+  },
+  {
+    name: 'Fake Tech Intern (Free Domain Impersonation)',
+    tag: 'High Risk',
+    input: {
+      jobTitle: 'Software Engineering Intern',
+      companyName: 'Microsoft Careers',
+      recruiterEmail: 'microsoft.recruitment.team@gmail.com',
+      officialWebsite: 'https://microsoft.com',
+      communicationChannel: 'whatsapp',
+      interviewConducted: 'text_chat',
+      moneyRequested: false,
+      moneyPurpose: '',
+      offeredSalary: '₹85,000 / month',
+      jobDescription: 'Congratulations! You have been selected for Microsoft Summer Internship 2026. Send your resume and Aadhaar card immediately on WhatsApp. Offer expires today if not accepted within 24 hours.',
+    },
+  },
+  {
+    name: 'Unpaid "Training Fee" Internship',
+    tag: 'High Risk',
+    input: {
+      jobTitle: 'Full Stack Web Developer Intern',
+      companyName: 'Apex Tech Solutions',
+      recruiterEmail: 'careers@apextechsolutions.in',
+      officialWebsite: 'https://apextechsolutions.in',
+      communicationChannel: 'email',
+      interviewConducted: 'none',
+      moneyRequested: true,
+      moneyPurpose: 'Mandatory certification & mentor kit fee of ₹4,999',
+      offeredSalary: 'Unpaid (Certificate + LOR provided)',
+      jobDescription: 'Guaranteed internship with live projects. Candidates must enroll in our mandatory 2-week training fee program and purchase kit fee before placement begins.',
+    },
+  },
+  {
+    name: 'Legitimate Junior Developer Offer',
+    tag: 'Safe / Verified',
+    input: {
+      jobTitle: 'Junior Frontend Developer',
+      companyName: 'Acme Cloud Innovations',
+      recruiterEmail: 'talent@acmecloud.io',
+      officialWebsite: 'https://acmecloud.io',
+      communicationChannel: 'email',
+      interviewConducted: 'phone_video',
+      moneyRequested: false,
+      moneyPurpose: '',
+      offeredSalary: '₹6,50,000 per annum',
+      jobDescription: 'Following your 2 technical rounds and behavioral conversation with our engineering lead, we are pleased to offer you the Junior Frontend Developer position. Working hours are Monday to Friday. Equipment will be shipped directly by our IT department at zero cost to you.',
+    },
+  },
+];
+
+export const SCAM_PATTERNS = [
+  {
+    title: 'The "Pay for Training or Equipment" Trap',
+    badge: 'Very Common',
+    description: 'Companies offering an internship but claiming you must pay an "application fee", "mentor kit fee", or "security deposit for laptop". Legitimate employers pay you, they never ask you to pay them.',
+    redFlags: ['Fee for interview/registration', 'Laptop security deposit', 'Payment for certificate'],
+  },
+  {
+    title: 'Telegram / WhatsApp Task Rating Scams',
+    badge: 'High Financial Loss',
+    description: 'Promises ₹2,000 - ₹10,000 per day for simple tasks like rating hotels, liking videos, or typing captcha. After giving ₹200 as bait, they ask you to deposit money in crypto/UPI to "unlock withdrawals".',
+    redFlags: ['Anonymous Telegram admins', 'Prepaid task unlocking', 'No interview or resume check'],
+  },
+  {
+    title: 'The Fake Enterprise Recruiter (Gmail / Lookalike Domain)',
+    badge: 'Identity Theft',
+    description: 'Scammers claim to be senior talent acquisition at Google, Amazon, or Tata, but email you from a `@gmail.com` or typosquatted domain like `@google-talent-recruitment.com`.',
+    redFlags: ['Free public webmail', 'Urgent 24h deadline', 'Immediate selection without technical round'],
+  },
+  {
+    title: 'The Fake Cheque Equipment Scam',
+    badge: 'Banking Fraud',
+    description: 'The "employer" sends you a counterfeit cheque or wire transfer for $2,000 / ₹1,00,000 to buy home office supplies from their "approved vendor". The cheque bounces days later, and you lose your real money.',
+    redFlags: ['Told to forward money to third party vendor', 'Overpayment check', 'Refusal to ship gear directly'],
+  },
+];
