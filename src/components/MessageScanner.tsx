@@ -11,12 +11,10 @@ import {
   ShieldAlert, 
   ShieldCheck, 
   Shield, 
-  AlertTriangle, 
   Copy, 
   Check, 
   Info, 
   Calculator, 
-  ExternalLink,
   Search,
   AlertOctagon
 } from 'lucide-react';
