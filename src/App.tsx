@@ -7,7 +7,7 @@ import { CompanyCheck } from './components/CompanyCheck';
 import { Checklist } from './components/Checklist';
 import { ScamPatterns } from './components/ScamPatterns';
 import { ScanHistory } from './components/ScanHistory';
-import { StudentSafetyHub } from './components/StudentSafetyHub';
+import { StudentSafetyHub as StudentProtectionCenter } from './components/StudentSafetyHub';
 import { JobCheckInput, AnalysisResult as AnalysisResultType, SavedScanRecord } from './types';
 import { analyzeJobOffer } from './detector';
 import { Shield, ShieldAlert, History, Sparkles, CheckCircle2 } from 'lucide-react';
@@ -209,7 +209,7 @@ export const App: React.FC = () => {
         {/* STUDENT SAFETY HUB TAB */}
         {activeTab === 'safety' && (
           <div className="tab-pane animate-fade-in">
-            <StudentSafetyHub />
+            <StudentProtectionCenter onStartScan={handleStartScan} onGoToCompanyCheck={handleGoToCompanyCheck} />
             <div className="divider-cyber"></div>
             <Checklist />
             <div className="divider-cyber"></div>
